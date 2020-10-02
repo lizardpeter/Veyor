@@ -1,1 +1,1 @@
-# Just testing the functionality of automatically creating releases with commits.
+# Just testing the functionality of automatically creating releases with commits. :)
