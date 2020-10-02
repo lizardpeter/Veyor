@@ -6,7 +6,7 @@ int main()
 {
 	for (;;)
 	{
-		std::cout << "Hello World!\n";
+		std::cout << "This is a test :)\n";
 		std::this_thread::sleep_for(std::chrono::milliseconds(5000));
 	}
 }
