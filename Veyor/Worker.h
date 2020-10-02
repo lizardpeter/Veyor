@@ -3,10 +3,20 @@
 #define WORKER_H
 
 #include <string>
+#include <chrono>
+#include <condition_variable>
+#include <mutex>
+#include <thread>
+
 namespace Work
 {
 	class Worker
 	{
+		std::thread thr;
+		bool keepWorking;
+		std::mutex mtx;
+		std::condition_variable cv;
+
 	public:
 		std::string m_name;
 		std::string m_purpose;
