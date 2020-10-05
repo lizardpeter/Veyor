@@ -7,6 +7,7 @@
 #include <condition_variable>
 #include <mutex>
 #include <thread>
+#include <iostream>
 
 namespace Work
 {

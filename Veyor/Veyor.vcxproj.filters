@@ -21,7 +21,7 @@
     <ClCompile Include="Worker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Thread.cpp">
+    <ClCompile Include="startThread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClInclude Include="Worker.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Thread.h">
+    <ClInclude Include="startThread.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
