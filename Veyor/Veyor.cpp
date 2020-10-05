@@ -17,7 +17,7 @@ int main()
 	thread2.run(thread.find, "Thread 2", hi);
 
 
-	std::this_thread::sleep_for(std::chrono::seconds(5));
+	std::this_thread::sleep_for(std::chrono::seconds(10));
 	{
 		std::lock_guard<std::mutex> guard(thread.m);
 		std::lock_guard<std::mutex> guard2(thread2.m);

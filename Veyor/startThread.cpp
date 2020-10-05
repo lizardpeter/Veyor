@@ -26,8 +26,8 @@ startThread::startThread()
 					//}
 					func(exit_thread, m, cv, m_name, func2); //ISSUE HERE???
 
-					std::unique_lock<std::mutex> lock(m);
-					cv.wait_for(lock, std::chrono::seconds(2));
+					//std::unique_lock<std::mutex> lock(m);
+					//cv.wait_for(lock, std::chrono::seconds(10));
 					std::cout << exit_thread;
 					std::cout << "OH NO. BIG MISTAKE";
 				}
@@ -46,7 +46,7 @@ void startThread::find(std::atomic<bool>& test, std::mutex &m, std::condition_va
 		std::cout << name;
 		i++;
 		std::unique_lock<std::mutex> lock(m);
-		cv.wait_for(lock, std::chrono::seconds(2));
+		cv.wait_for(lock, std::chrono::seconds(15));
 		//std::cout << exit_thread;
 		
 	}
