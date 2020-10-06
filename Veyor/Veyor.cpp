@@ -5,7 +5,7 @@
 
 void hi()
 {
-	std::cout << "Function hi is running within the thread";
+	std::cout << "Function hi is running within the thread \n";
 }
 
 int main()
@@ -14,7 +14,7 @@ int main()
 	thread.run(thread.find, "Thread 1", hi);
 	startThread thread2;
 	thread2.run(thread.find, "Thread 2", hi);
-	std::cout << "Initialization is complete" << std::endl;
+	std::cout << "Initialization is complete \n" << std::endl;
 
 	std::this_thread::sleep_for(std::chrono::seconds(10));
 	{
@@ -26,7 +26,7 @@ int main()
 	thread.cv.notify_all();
 	thread2.cv.notify_all();
 
-	std::cout << "Threads stop immediately" << std::endl;
+	std::cout << "Threads stop immediately \n" << std::endl;
 	thread.my_thread.join();
 	thread2.my_thread.join();
 }

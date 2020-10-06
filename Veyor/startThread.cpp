@@ -16,7 +16,7 @@ startThread::startThread()
 		m_name = name;
 		my_thread = std::thread([this, func, func2] {
 			do {
-				std::cout << "Thread " + m_name + " is doing something..." << std::endl;
+				std::cout << m_name + " is doing something... \n" << std::endl;
 				{
 					//int i = 0;
 					//while (!exit_thread && i < 100000)
@@ -43,7 +43,7 @@ void startThread::find(std::atomic<bool>& test, std::mutex &m, std::condition_va
 	{
 		//std::cout << i;
 		func2();
-		std::cout << name;
+		std::cout << name + "\n";
 		i++;
 		std::unique_lock<std::mutex> lock(m);
 		cv.wait_for(lock, std::chrono::seconds(15));
