@@ -16,7 +16,7 @@ startThread::startThread()
 		m_name = name;
 		my_thread = std::thread([this, func, func2] {
 			do {
-				std::cout << "Thread is doing something..." << std::endl;
+				std::cout << "Thread " + m_name + " is doing something..." << std::endl;
 				{
 					//int i = 0;
 					//while (!exit_thread && i < 100000)
@@ -29,7 +29,7 @@ startThread::startThread()
 					//std::unique_lock<std::mutex> lock(m);
 					//cv.wait_for(lock, std::chrono::seconds(10));
 					std::cout << exit_thread;
-					std::cout << "OH NO. BIG MISTAKE";
+					std::cout << "OH NO. BIG MISTAKE...";
 				}
 			} while (!exit_thread);
 			});
